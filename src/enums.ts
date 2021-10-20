@@ -14,3 +14,7 @@ export enum IAccountType {
 export enum ISocialProvider {
   OPINSYS = 'opinsys',
 }
+
+export enum IEventType {
+  USER_CREATED = 'user_created',
+}
