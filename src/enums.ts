@@ -17,4 +17,6 @@ export enum ISocialProvider {
 
 export enum IEventType {
   USER_CREATED = 'user_created',
+  USER_UPDATED = 'user_updated',
+  USER_REMOVED = 'user_removed',
 }
