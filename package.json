@@ -1,6 +1,6 @@
 {
   "name": "typings",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "This is a shared library for rittaschool products.",
   "repository": "https://github.com/rittaschool/typings.git",
   "author": "Midka <me@midka.dev>",
