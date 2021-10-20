@@ -1,11 +1,12 @@
 {
   "name": "@rittaschool/shared",
-  "version": "0.0.31",
-  "main": "index.ts",
+  "version": "0.0.32",
+  "main": "lib/index.js",
   "description": "This is a shared library for rittaschool products.",
   "repository": "https://github.com/rittaschool/typings.git",
   "author": "Midka <me@midka.dev>",
   "license": "GPLv3",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc"
   },
@@ -14,6 +15,6 @@
     "typescript": "^4.4.4"
   },
   "files": [
-    "lib/**/*"
+    "/lib"
   ]
 }
