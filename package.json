@@ -1,8 +1,8 @@
 {
   "name": "@rittaschool/shared",
-  "version": "0.0.36",
-  "main": "lib/index.js",
-  "module": "lib/index.esm.js",
+  "version": "0.0.37",
+  "main": "./lib/index.cjs.js",
+  "module": "./lib/index.esm.js",
   "description": "This is a shared library for rittaschool products.",
   "repository": "https://github.com/rittaschool/shared.git",
   "author": "Midka <me@midka.dev>",
