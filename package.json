@@ -3,6 +3,7 @@
   "version": "0.0.39",
   "main": "./lib/index.cjs.js",
   "module": "./lib/index.esm.js",
+  "types": "./lib/index.d.ts",
   "description": "This is a shared library for rittaschool products.",
   "repository": "https://github.com/rittaschool/shared.git",
   "author": "Midka <me@midka.dev>",
