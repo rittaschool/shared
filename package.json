@@ -1,6 +1,6 @@
 {
   "name": "@rittaschool/shared",
-  "version": "0.0.35",
+  "version": "0.0.36",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
   "description": "This is a shared library for rittaschool products.",
