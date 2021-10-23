@@ -1,6 +1,6 @@
-import { IAccountType } from '../enums';
-import { IOAuth2Identifiers } from '../types';
-import { IMFAOptions, IYubikeyOptions } from './auth';
+import { IAccountType } from "../enums";
+import { IOAuth2Identifiers } from "../types";
+import { IMFAOptions, IYubikeyOptions } from "./auth";
 
 export interface IUser {
   id: string;
