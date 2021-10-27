@@ -9,16 +9,23 @@
   "author": "Midka <me@midka.dev>",
   "license": "GPLv3",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "types": "ts-node ./scripts/joi-to-typescript.ts"
   },
   "packageManager": "yarn@3.0.2",
   "devDependencies": {
+    "@types/node": "^16.11.6",
+    "joi-to-typescript": "^2.2.2",
     "rollup": "^2.58.0",
     "rollup-plugin-typescript2": "^0.30.0",
+    "ts-node": "^10.4.0",
     "typescript": "^4.4.4"
   },
   "files": [
     "lib",
     "package.json"
-  ]
+  ],
+  "dependencies": {
+    "joi": "^17.4.2"
+  }
 }
