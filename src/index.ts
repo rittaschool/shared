@@ -21,3 +21,4 @@ export {
 } from "./interfaces/index";
 export { IOAuth2Identifiers } from "./types/index";
 export { IAccountType, IEventType, ISocialProvider } from "./enums";
+export * from "./validation/";
