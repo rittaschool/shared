@@ -1,4 +1,13 @@
-export { Event } from "./classes/index";
+export {
+  Event,
+  YubikeyOptions,
+  User,
+  Oauth2Identifiers,
+  MFAOptions,
+  Location,
+  CreateUserDto,
+  BackupCode,
+} from "./classes/index";
 export {
   IAccount,
   IBackupCode,
