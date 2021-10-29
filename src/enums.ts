@@ -12,11 +12,13 @@ export enum IAccountType {
 }
 
 export enum ISocialProvider {
-  OPINSYS = 'opinsys',
+  OPINSYS = "opinsys",
 }
 
 export enum IEventType {
-  USER_CREATED = 'user_created',
-  USER_UPDATED = 'user_updated',
-  USER_REMOVED = 'user_removed',
+  USER_CREATED = "user_created",
+  USER_UPDATED = "user_updated",
+  USER_REMOVED = "user_removed",
+  GET_USERS = "get_users",
+  GET_USER = "get_user",
 }
