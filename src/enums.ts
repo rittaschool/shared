@@ -1,14 +1,13 @@
-// 8-99 reserved for future use
 export enum IAccountType {
-  GUEST = 0,
-  STUDENT = 1,
-  PARENT = 2,
-  TEACHER = 3,
-  PRINCIPAL = 4,
-  SCHOOL_SECRETARY = 5,
-  STUDY_INSTRUCTOR = 6,
-  STAFF = 7,
-  ADMIN = 100,
+  ADMIN = 0,
+  GUEST = 1,
+  STUDENT = 2,
+  PARENT = 3,
+  TEACHER = 4,
+  PRINCIPAL = 5,
+  SCHOOL_SECRETARY = 6,
+  STUDY_INSTRUCTOR = 7,
+  STAFF = 8,
 }
 
 export enum ISocialProvider {
@@ -21,4 +20,11 @@ export enum IEventType {
   USER_REMOVED = "user_removed",
   GET_USERS = "get_users",
   GET_USER = "get_user",
+}
+
+export enum ILoginResponse {
+  INVALID_CREDINTIALS = "invalid_credintials",
+  MFA_REQUIRED = "mfa_required",
+  PWD_CHANGE_REQUIRED = "pwd_change_required",
+  LOGGED_IN = "logged_in"
 }

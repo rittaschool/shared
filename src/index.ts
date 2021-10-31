@@ -20,5 +20,5 @@ export {
   IYubikeyOptions,
 } from "./interfaces/index";
 export { IOAuth2Identifiers } from "./types/index";
-export { IAccountType, IEventType, ISocialProvider } from "./enums";
+export { IAccountType, IEventType, ISocialProvider, ILoginResponse } from "./enums";
 export * from "./validation/";

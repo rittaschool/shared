@@ -10,7 +10,7 @@ export class User {
   username?: string;
   email?: string;
   password: string;
-  home: ILocation;
+  home?: ILocation;
   mfa?: IMFAOptions;
   yubikey?: IYubikeyOptions;
   oauth2Identifiers?: IOAuth2Identifiers;
@@ -28,10 +28,10 @@ export class User {
     firstName: string,
     lastName: string,
     password: string,
-    home: ILocation,
     accounts: string[],
     isFirstLogin: boolean,
     isPasswordChangeRequired: boolean,
+    home?: ILocation,
     phoneNumber?: string,
     alias?: string,
     username?: string,
