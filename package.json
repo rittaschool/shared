@@ -23,6 +23,7 @@
     "package.json"
   ],
   "dependencies": {
-    "joi": "^17.4.2"
+    "joi": "^17.4.2",
+    "mongoose": "^6.0.12"
   }
 }
