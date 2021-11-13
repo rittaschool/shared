@@ -13,6 +13,19 @@ export class LoginUserDto {
   }
 }
 
+export class LoginMFAUserDto {
+  mfaToken: string;
+  mfaCode: string;
+
+  constructor(
+    mfaToken: string,
+    mfaCode: string,
+  ) {
+    this.mfaToken = mfaToken;
+    this.mfaCode = mfaCode;
+  }
+}
+
 export class LoginOAuthUserDto {
   provider: ISocialProvider;
   identifier: string;
