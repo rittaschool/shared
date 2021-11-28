@@ -33,4 +33,6 @@ export abstract class EntityRepository<T extends Document> {
   ) {
     return this.model.updateOne(entityFilterQuery, updateEntity).exec();
   }
+
+  // TODO: Add remove method
 }
