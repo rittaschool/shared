@@ -2,11 +2,10 @@ import joi from "joi";
 import { ISocialProvider } from "../..";
 
 export const LoginValidationSchema = joi.object({
-  username: joi.string().when('username', {
-    is: joi.string().email(),
-    then: joi.string().email(),
-    otherwise: joi.string().lowercase().min(3).max(30)
-  }).required(),
+  username: joi.alternatives().try(
+    joi.string().email(),
+    joi.string().lowercase().min(3).max(30)
+  ).required(),
   password: joi.string().required(),
 });
 
