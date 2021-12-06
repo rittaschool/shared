@@ -17,3 +17,5 @@ export { Oauth2Identifiers } from "./Oauth2Identifiers";
 export { User } from "./User";
 export { YubikeyOptions } from "./YubikeyOptions";
 export * from "./dto/";
+
+export { RittaError } from "./RittaError";
