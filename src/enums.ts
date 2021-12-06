@@ -49,4 +49,5 @@ export enum IErrorType {
   INVALID_PROVIDER = "invalid_provider",
   INVALID_ORGANIZATION = "invalid_organization",
   INVALID_TOKEN = "invalid_token",
+  INVALID_CODE = "invalid_code",
 }
