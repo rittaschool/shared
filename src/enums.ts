@@ -29,7 +29,7 @@ export enum ILoginResponse {
   INVALID_CREDINTIALS = "invalid_credintials",
   MFA_REQUIRED = "mfa_required",
   PWD_CHANGE_REQUIRED = "pwd_change_required",
-  LOGGED_IN = "logged_in"
+  LOGGED_IN = "logged_in",
 }
 
 export enum ITokenType {
@@ -37,4 +37,16 @@ export enum ITokenType {
   REFRESH_TOKEN = "refresh",
   MFA_TOKEN = "mfa",
   PWD_CHANGE_TOKEN = "pwd_change",
+}
+
+export enum IErrorType {
+  INVALID_CREDENTIALS = "invalid_credentials",
+  USER_NOT_FOUND = "user_not_found",
+  USER_ALREADY_EXISTS = "user_already_exists",
+  USER_DISABLED = "user_disabled",
+  EMAIL_OR_USERNAME_REQUIRED = "email_or_username_required",
+  UNSUPPORTED_PROVIDER = "unsupported_provider",
+  INVALID_PROVIDER = "invalid_provider",
+  INVALID_ORGANIZATION = "invalid_organization",
+  INVALID_TOKEN = "invalid_token",
 }

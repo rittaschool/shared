@@ -1,8 +1,10 @@
+import { IErrorType } from "../";
+
 export class RittaError extends Error {
   name = "RittaException";
-  type: string;
+  type: IErrorType;
 
-  constructor(message: string, type: string) {
+  constructor(message: string, type: IErrorType) {
     super(message);
     this.name = "RittaException";
     this.type = type;
