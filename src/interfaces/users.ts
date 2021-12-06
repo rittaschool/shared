@@ -24,6 +24,25 @@ export interface IUser {
   updatedAt: Date;
 }
 
+export interface IAPIUser {
+  id: string;
+  firstName: string;
+  lastName: string;
+  phoneNumber?: string;
+  alias?: string;
+  username?: string;
+  email?: string;
+  home: ILocation;
+  oauth2Identifiers?: IOAuth2Identifiers;
+  accounts: IAccount[];
+  latestLogin?: Date;
+  latestPasswordChange?: Date;
+  isFirstLogin: boolean;
+  isPasswordChangeRequired: boolean;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
 export interface ILocation {
   address: string;
   city: string;

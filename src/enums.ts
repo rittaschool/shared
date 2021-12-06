@@ -31,3 +31,10 @@ export enum ILoginResponse {
   PWD_CHANGE_REQUIRED = "pwd_change_required",
   LOGGED_IN = "logged_in"
 }
+
+export enum ITokenType {
+  ACCESS_TOKEN = "access",
+  REFRESH_TOKEN = "refresh",
+  MFA_TOKEN = "mfa",
+  PWD_CHANGE_TOKEN = "pwd_change",
+}
