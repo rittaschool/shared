@@ -19,6 +19,8 @@ jobs:
       - run: yarn install
       # Build the package
       - run: yarn build
+      # Test the package
+      - run: yarn test
       # Publish to npm
       - run: npm publish --access public
         env:
