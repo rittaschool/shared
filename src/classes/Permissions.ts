@@ -74,10 +74,22 @@ export class Permissions {
     permissions: number,
     ...permissionsToRemove: Permission[]
   ) {
+    // Get current permissions
+    const currentPermissions = this.getPermissions(permissions);
+
     let newPerms: number = permissions;
 
     // Loop over all permissions that are going to be removed
     for (const permission of permissionsToRemove) {
+      // Check if the permission is not found
+      if (!currentPermissions.includes(this.getPermission(permission))) {
+        // Throw error
+        throw new RittaError(
+          "Permission has not been added",
+          IErrorType.PERMISSION_IS_NOT_ADDED
+        );
+      }
+
       // Remove the permission from the result
       newPerms &= ~permission;
     }
