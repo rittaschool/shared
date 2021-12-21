@@ -29,5 +29,19 @@ export enum ILoginResponse {
   INVALID_CREDINTIALS = "invalid_credintials",
   MFA_REQUIRED = "mfa_required",
   PWD_CHANGE_REQUIRED = "pwd_change_required",
-  LOGGED_IN = "logged_in"
+  LOGGED_IN = "logged_in",
+}
+
+export enum Permission {
+  GET_ALL_USERS = 1 << 0,
+  DISABLE_LOGIN = 1 << 1,
+  DISABLE_REGISTER = 1 << 2,
+  DISABLE_USER = 1 << 3,
+  DISABLE_ROLE = 1 << 4,
+  INSTALL_PLUGIN = 1 << 5,
+  UNINSTALL_PLUGIN = 1 << 6,
+  ENABLE_LOGIN = 1 << 7,
+  ENABLE_REGISTER = 1 << 8,
+  ENABLE_USER = 1 << 9,
+  ENABLE_ROLE = 1 << 10,
 }
