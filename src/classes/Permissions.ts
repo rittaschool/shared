@@ -86,7 +86,7 @@ export class Permissions {
         // Throw error
         throw new RittaError(
           "Permission has not been added",
-          IErrorType.PERMISSION_IS_NOT_ADDED
+          IErrorType.PERMISSION_NOT_FOUND
         );
       }
 

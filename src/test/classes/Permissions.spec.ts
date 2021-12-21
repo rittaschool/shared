@@ -67,7 +67,7 @@ describe("Permissions", () => {
       }).toThrow(
         new RittaError(
           "Permission has not been added",
-          IErrorType.PERMISSION_IS_NOT_ADDED
+          IErrorType.PERMISSION_NOT_FOUND
         )
       );
     });
@@ -86,6 +86,25 @@ describe("Permissions", () => {
       );
 
       expect(result).toEqual(1);
+    });
+  });
+
+  describe("getPermission", () => {
+    it("should return the permission", () => {
+      const result = Permissions.getPermission(Permission.DISABLE_LOGIN);
+
+      expect(result).toEqual("disableLogin");
+    });
+
+    it("should throw error because the permission is not found", () => {
+      expect(() => {
+        Permissions.getPermission(0);
+      }).toThrow(
+        new RittaError(
+          "Invalid Permission, code: 0",
+          IErrorType.PERMISSION_NOT_FOUND
+        )
+      );
     });
   });
 });
