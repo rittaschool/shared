@@ -63,18 +63,3 @@ export class Permissions {
     } catch (error) {}
   }
 }
-
-const newPerms = Permissions.addPermissions(
-  69,
-  Permission.DISABLE_LOGIN,
-  Permission.ENABLE_LOGIN
-);
-
-console.log(Permissions.getPermissions(newPerms));
-
-const new2Perms = Permissions.removePermissions(
-  newPerms,
-  Permission.DISABLE_LOGIN
-);
-
-console.log(Permissions.getPermissions(new2Perms));
