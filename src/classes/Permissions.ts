@@ -1,4 +1,5 @@
 import { Permission } from "../enums";
+import { IErrorType, RittaError } from "../";
 
 export class Permissions {
   static permissions: {
@@ -60,6 +61,11 @@ export class Permissions {
       } else {
         return null;
       }
-    } catch (error) {}
+    } catch (error) {
+      throw new RittaError(
+        `Invalid Permission, code: ${permission}`,
+        IErrorType.INVALID_PERMISSION
+      );
+    }
   }
 }

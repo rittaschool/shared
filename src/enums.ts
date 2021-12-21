@@ -44,6 +44,7 @@ export enum Permission {
   ENABLE_REGISTER = 1 << 8,
   ENABLE_USER = 1 << 9,
   ENABLE_ROLE = 1 << 10,
+}
 
 export enum ITokenType {
   ACCESS_TOKEN = "access",
@@ -63,5 +64,5 @@ export enum IErrorType {
   INVALID_ORGANIZATION = "invalid_organization",
   INVALID_TOKEN = "invalid_token",
   INVALID_CODE = "invalid_code",
-  INVALID_PERMISSION = "invalid_permission"
+  INVALID_PERMISSION = "invalid_permission",
 }
