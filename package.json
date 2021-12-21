@@ -7,7 +7,7 @@
   "description": "This is a shared library for rittaschool products.",
   "repository": "https://github.com/rittaschool/shared.git",
   "author": "Midka <me@midka.dev>",
-  "license": "GPLv3",
+  "license": "AGPL-3.0-only",
   "scripts": {
     "build": "rollup -c",
     "test": "jest"
