@@ -44,4 +44,24 @@ export enum Permission {
   ENABLE_REGISTER = 1 << 8,
   ENABLE_USER = 1 << 9,
   ENABLE_ROLE = 1 << 10,
+
+export enum ITokenType {
+  ACCESS_TOKEN = "access",
+  REFRESH_TOKEN = "refresh",
+  MFA_TOKEN = "mfa",
+  PWD_CHANGE_TOKEN = "pwd_change",
+}
+
+export enum IErrorType {
+  INVALID_CREDENTIALS = "invalid_credentials",
+  USER_NOT_FOUND = "user_not_found",
+  USER_ALREADY_EXISTS = "user_already_exists",
+  USER_DISABLED = "user_disabled",
+  EMAIL_OR_USERNAME_REQUIRED = "email_or_username_required",
+  UNSUPPORTED_PROVIDER = "unsupported_provider",
+  INVALID_PROVIDER = "invalid_provider",
+  INVALID_ORGANIZATION = "invalid_organization",
+  INVALID_TOKEN = "invalid_token",
+  INVALID_CODE = "invalid_code",
+  INVALID_PERMISSION = "invalid_permission"
 }
