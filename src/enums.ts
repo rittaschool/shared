@@ -65,4 +65,5 @@ export enum IErrorType {
   INVALID_TOKEN = "invalid_token",
   INVALID_CODE = "invalid_code",
   INVALID_PERMISSION = "invalid_permission",
+  PERMISSION_IS_ALREADY_ADDED = "permission_is_already_added",
 }
