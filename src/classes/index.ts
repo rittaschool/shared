@@ -19,3 +19,4 @@ export { YubikeyOptions } from "./YubikeyOptions";
 export * from "./dto/";
 
 export { RittaError } from "./RittaError";
+export { Permissions } from "./Permissions";
