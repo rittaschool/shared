@@ -15,8 +15,11 @@ export namespace Permissions {
     enableRole: Permission.ENABLE_ROLE,
   };
 
-  export function getPermissions(permissions: number) {
-    if (permissions === 0)
+  export function getPermissions(
+    permissions: number,
+    throwErr: boolean = true
+  ) {
+    if (permissions === 0 && throwErr)
       throw new RittaError(
         "Too small permission number",
         IErrorType.INVALID_PERMISSION
@@ -37,7 +40,7 @@ export namespace Permissions {
     permissions: number,
     ...permissionsToAdd: Permission[]
   ) {
-    const currentPermissions = Permissions.getPermissions(permissions);
+    const currentPermissions = Permissions.getPermissions(permissions, false);
 
     for (const permission of permissionsToAdd) {
       if (currentPermissions.includes(Permissions.getPermission(permission))) {
