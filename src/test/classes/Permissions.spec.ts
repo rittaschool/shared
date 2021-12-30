@@ -107,4 +107,42 @@ describe("Permissions", () => {
       );
     });
   });
+
+  describe("checkHasPermission", () => {
+    it("should return false because not enough permissions", () => {
+      const result = Permissions.checkHasPermission(
+        Permissions.permissions.getAllUsers,
+        Permissions.permissions.disableLogin
+      );
+
+      expect(result).toBeFalsy();
+    });
+
+    it("should return true because has enough permissions", () => {
+      const result = Permissions.checkHasPermission(
+        Permissions.permissions.getAllUsers,
+        Permissions.permissions.getAllUsers
+      );
+
+      expect(result).toBeTruthy();
+    });
+
+    it("should return true because has enough permissions with multiple permissions", () => {
+      const requiredPerms = 3;
+      const hadPerms = 7;
+
+      const result = Permissions.checkHasPermission(requiredPerms, hadPerms);
+
+      expect(result).toBeTruthy();
+    });
+
+    it("should return false because not enough permissions with multiple permissions", () => {
+      const requiredPerms = 3;
+      const hadPerms = 1;
+
+      const result = Permissions.checkHasPermission(requiredPerms, hadPerms);
+
+      expect(result).toBeFalsy();
+    });
+  });
 });

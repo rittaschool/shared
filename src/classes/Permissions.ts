@@ -89,4 +89,18 @@ export namespace Permissions {
       IErrorType.INVALID_PERMISSION
     );
   }
+
+  export function checkHasPermission(
+    requiredPermissions: number,
+    checkFrom: number
+  ) {
+    const requiredPerms = Permissions.getPermissions(requiredPermissions);
+    const permsToCheckFor = Permissions.getPermissions(checkFrom);
+
+    const doesUserHavePermission = requiredPerms.every((element) =>
+      permsToCheckFor.includes(element)
+    );
+
+    return doesUserHavePermission;
+  }
 }
