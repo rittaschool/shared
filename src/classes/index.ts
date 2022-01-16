@@ -20,3 +20,4 @@ export * from "./dto/";
 
 export { RittaError } from "./RittaError";
 export { Permissions } from "./Permissions";
+export * from "./Challenge";
