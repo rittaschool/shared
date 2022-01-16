@@ -9,9 +9,17 @@ export class Challenge {
     userId?: string;
   };
 
-  constructor(public readonly type: IChallengeType, userId: string) {
+  constructor(
+    public readonly type: IChallengeType,
+    userId: string,
+    obj?: Challenge
+  ) {
     this.id = "challenge-" + randomUUID();
     this.data = { userId };
+
+    if (obj) {
+      Object.assign(this, obj);
+    }
   }
 
   submit(
