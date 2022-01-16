@@ -12,14 +12,10 @@ export class Challenge {
   constructor(
     public readonly type: IChallengeType,
     userId: string,
-    obj?: Challenge
+    id?: string
   ) {
-    this.id = "challenge-" + randomUUID();
+    this.id = id || "challenge-" + randomUUID();
     this.data = { userId };
-
-    if (obj) {
-      Object.assign(this, obj);
-    }
   }
 
   submit(
@@ -34,6 +30,11 @@ export class Challenge {
 
   getData() {
     return this.data;
+  }
+
+  dataFromJSON(json: string) {
+    const data = JSON.parse(json);
+    this.data = data;
   }
 }
 
