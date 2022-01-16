@@ -1,13 +1,13 @@
 {
   "name": "@rittaschool/shared",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "main": "./lib/index.cjs.js",
   "module": "./lib/index.esm.js",
   "types": "./lib/index.d.ts",
   "description": "This is a shared library for rittaschool products.",
   "repository": "https://github.com/rittaschool/shared.git",
   "author": "Midka <me@midka.dev>",
-  "license": "AGPL-3.0-only",
+  "license": "MIT",
   "scripts": {
     "build": "rollup -c",
     "test": "jest"
