@@ -1,42 +1,49 @@
 import { randomUUID } from "crypto";
 
-export class Challenge {
+export interface Challenge {
   id: string;
+  type: IChallengeType;
+  data?:
+    | IPasswordChallengeData
+    | IOtpChallengeData
+    | IFido2ChallengeData
+    | null;
+  userId: string;
+}
 
-  private data: {
-    type?: IChallengeType;
-    data?: IPasswordChallengeData | IOtpChallengeData | IFido2ChallengeData;
-    userId?: string;
+export const generateChallenge = (
+  type: IChallengeType,
+  userId: string
+): Challenge => {
+  const challenge: Challenge = {
+    id: `challenge-${randomUUID()}`,
+    type,
+    data: null,
+    userId,
   };
 
-  constructor(
-    public readonly type: IChallengeType,
-    userId: string,
-    id?: string
-  ) {
-    this.id = id || "challenge-" + randomUUID();
-    this.data = { userId };
+  switch (type) {
+    case IChallengeType.PASSWORD_NEEDED:
+      challenge.data = {
+        password: "",
+      };
+      break;
+    case IChallengeType.OTP_NEEDED:
+      challenge.data = {
+        otp: "",
+      };
+      break;
+    case IChallengeType.FIDO2_NEEDED:
+      //TODO: add data
+      challenge.data = null;
+      break;
+    default:
+      challenge.data = null;
+      break;
   }
 
-  submit(
-    data: IPasswordChallengeData | IOtpChallengeData | IFido2ChallengeData
-  ) {
-    this.data = {
-      type: this.type,
-      data,
-      userId: this.data.userId,
-    };
-  }
-
-  getData() {
-    return this.data;
-  }
-
-  dataFromJSON(json: string) {
-    const data = JSON.parse(json);
-    this.data = data;
-  }
-}
+  return challenge;
+};
 
 export interface IPasswordChallengeData {
   password: string;
