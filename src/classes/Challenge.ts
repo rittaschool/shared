@@ -3,12 +3,14 @@ import { randomUUID } from "crypto";
 export interface Challenge {
   id: string;
   type: IChallengeType;
-  data?:
-    | IPasswordChallengeData
-    | IOtpChallengeData
-    | IFido2ChallengeData
-    | null;
+  data?: ChallengeData | null;
   userId: string;
+}
+
+export interface ChallengeData {
+  passwordData?: IPasswordChallengeData | null;
+  otpData?: IOtpChallengeData | null;
+  fido2Data?: IFido2ChallengeData | null;
 }
 
 export const generateChallenge = (
@@ -25,12 +27,16 @@ export const generateChallenge = (
   switch (type) {
     case IChallengeType.PASSWORD_NEEDED:
       challenge.data = {
-        password: "",
+        passwordData: {
+          password: "",
+        },
       };
       break;
     case IChallengeType.OTP_NEEDED:
       challenge.data = {
-        otp: "",
+        otpData: {
+          otp: "",
+        },
       };
       break;
     case IChallengeType.FIDO2_NEEDED:
