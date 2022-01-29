@@ -30,6 +30,7 @@ export enum ILoginResponse {
   MFA_REQUIRED = "mfa_required",
   PWD_CHANGE_REQUIRED = "pwd_change_required",
   LOGGED_IN = "logged_in",
+  CHALLENGE_NEEDED = "challenge_needed",
 }
 
 export enum Permission {

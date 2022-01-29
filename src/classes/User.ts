@@ -1,7 +1,8 @@
-import { ILocation, IMFAOptions, IYubikeyOptions } from "../interfaces";
+import { ILocation, IMFAOptions, IUser, IYubikeyOptions } from "../interfaces";
 import { IOAuth2Identifiers } from "../types";
 
-export class User {
+//TODO: remove omit when making accounts
+export class User implements Omit<IUser, "accounts"> {
   id: string;
   firstName: string;
   lastName: string;
