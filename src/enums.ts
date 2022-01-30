@@ -56,6 +56,7 @@ export enum ITokenType {
 }
 
 export enum IErrorType {
+  UNKNOWN = "unknown",
   INVALID_CREDENTIALS = "invalid_credentials",
   USER_NOT_FOUND = "user_not_found",
   USER_ALREADY_EXISTS = "user_already_exists",
