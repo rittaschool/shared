@@ -23,6 +23,7 @@ export enum IEventType {
   USER_LOGIN = "user_login",
   USER_OAUTH_LOGIN = "user_oauth_login",
   USER_MFA_LOGIN = "user_mfa_login",
+  STATUS = "status",
 }
 
 export enum ILoginResponse {
