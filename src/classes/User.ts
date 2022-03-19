@@ -1,4 +1,4 @@
-import { ILocation, IMFAOptions, IUser, IYubikeyOptions } from "../interfaces";
+import { ILocation, IMFAOptions, IUser, IFidoOptions } from "../interfaces";
 import { IOAuth2Identifiers } from "../types";
 
 //TODO: remove omit when making accounts
@@ -13,7 +13,7 @@ export class User implements Omit<IUser, "accounts"> {
   password: string;
   home?: ILocation;
   mfa?: IMFAOptions;
-  yubikey?: IYubikeyOptions;
+  fido?: IFidoOptions;
   oauth2Identifiers?: IOAuth2Identifiers;
   // string type because we are going to store the accounts in a different service. The string will be the id of the account
   accounts: string[];
@@ -38,7 +38,7 @@ export class User implements Omit<IUser, "accounts"> {
     username?: string,
     email?: string,
     mfa?: IMFAOptions,
-    yubikey?: IYubikeyOptions,
+    fido?: IFidoOptions,
     oauth2Identifiers?: IOAuth2Identifiers,
     latestLogin?: Date,
     latestPasswordChange?: Date
@@ -53,7 +53,7 @@ export class User implements Omit<IUser, "accounts"> {
     this.password = password;
     this.home = home;
     this.mfa = mfa;
-    this.yubikey = yubikey;
+    this.fido = fido;
     this.oauth2Identifiers = oauth2Identifiers;
     this.accounts = accounts;
     this.latestLogin = latestLogin;
