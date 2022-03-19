@@ -1,9 +1,4 @@
-import {
-  Location,
-  Oauth2Identifiers,
-  MFAOptions,
-  YubikeyOptions,
-} from "../index";
+import { Location, Oauth2Identifiers, MFAOptions, FidoOptions } from "../index";
 
 export class UpdateUserDto {
   firstName?: string;
@@ -16,5 +11,5 @@ export class UpdateUserDto {
   phoneNumber?: string;
   username?: string;
   mfa?: MFAOptions;
-  yubikey?: YubikeyOptions;
+  fido?: FidoOptions;
 }
