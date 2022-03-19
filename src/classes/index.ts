@@ -15,7 +15,7 @@ export { Location } from "./Location";
 export { MFAOptions } from "./MFAOptions";
 export { Oauth2Identifiers } from "./Oauth2Identifiers";
 export { User } from "./User";
-export { YubikeyOptions } from "./YubikeyOptions";
+export { FidoOptions } from "./FidoOptions";
 export * from "./dto/";
 
 export { RittaError } from "./RittaError";
