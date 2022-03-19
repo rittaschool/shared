@@ -1,7 +1,11 @@
-export interface IYubikeyOptions {
+export interface IFidoOptions {
   enabled: boolean;
-  id: string;
-  pin: string;
+  devices: IFidoDevice[];
+}
+
+export interface IFidoDevice {
+  enabled: boolean;
+  public_key: string;
 }
 
 export interface IMFAOptions {

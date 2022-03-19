@@ -1,6 +1,6 @@
 import { IAccountType } from "../enums";
 import { IOAuth2Identifiers } from "../types";
-import { IMFAOptions, IYubikeyOptions } from "./auth";
+import { IMFAOptions, IFidoOptions } from "./auth";
 
 export interface IUser {
   id: string;
@@ -13,7 +13,7 @@ export interface IUser {
   password: string;
   home?: ILocation;
   mfa?: IMFAOptions;
-  yubikey?: IYubikeyOptions;
+  fido?: IFidoOptions;
   oauth2Identifiers?: IOAuth2Identifiers;
   accounts: IAccount[];
   latestLogin?: Date;
